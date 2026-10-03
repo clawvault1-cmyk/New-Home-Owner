@@ -3,176 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#16382c">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c1013">
   <meta name="format-detection" content="telephone=no">
-  <title>New Home File</title>
-  <meta name="description" content="You closed. Where’s the shutoff? A printed house file: the water main, the paint code, the warranty date. $67.">
-  <meta property="og:title" content="New Home File">
-  <meta property="og:description" content="You closed. Where’s the shutoff? Print the shutoffs, paint codes, and warranties. Leave the file by the keys. $67.">
+  <title>Sunday night. Which way does the valve turn?</title>
+  <meta name="description" content="Sunday night. Something in the house failed, and nobody knows which way the valve turns. The answer stays in the house. $67.">
+  <meta property="og:title" content="Sunday night. Which way does the valve turn?">
+  <meta property="og:description" content="The line is already leaking. The answer stays in the house, not in someone’s memory. $67.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="images/hero.png" as="image">
-  <link rel="preload" href="fonts/newsreader-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/public-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="page">
-    <header class="masthead">
-      <p class="mark">New Home File</p>
-      <h1>You closed.<br>Where’s the shutoff?</h1>
-      <p class="sub">Print the shutoffs, paint codes, warranties, and the first-year list. Leave the file by the keys.</p>
-    </header>
+    <section class="night" aria-label="New Home File, 67 dollars">
+      <h1>Sunday night. Nobody knows which way the valve turns.</h1>
+      <div class="offer">
+        <p class="price">$67</p>
+        <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+      </div>
+    </section>
 
-    <main>
-      <section class="offer" aria-label="New Home File, 67 dollars">
-        <figure class="hero-sheet">
-          <img src="images/hero.png" width="680" height="578" alt="Sample house record. Water main: basement, east wall, left of the heater, red-handled valve. Living room paint: Benjamin Moore Simply White, OC-117, eggshell. Water heater warranty ends 2027-03-12." fetchpriority="high">
-        </figure>
-        <div class="offer-buy">
-          <p class="price"><span class="usd">$</span>67</p>
-          <a class="buy" data-product="newHomeFile">Get the $67 file</a>
-        </div>
-        <p class="fine">Instant PDF. Print at home. Three sections in one.</p>
-      </section>
+    <section class="cost" aria-labelledby="cost-title">
+      <h2 id="cost-title">The line is already leaking.</h2>
+      <p>You are still hunting the shutoff. The wrong way makes it run harder. The plumber charges for the minutes you spent looking. Then the fight, about who was supposed to know.</p>
+    </section>
 
-      <section class="gallery" aria-labelledby="sheets-title">
-        <h2 id="sheets-title">The three sheets that stay with the house</h2>
+    <section class="relief" aria-labelledby="relief-title">
+      <h2 id="relief-title">The answer stays in the house.</h2>
+      <p>Not in the seller’s head. Not in a drawer of manuals still in the plastic. Someone else can find the valve without you on the phone. You stop paying a second time to learn the same house.</p>
+      <div class="offer">
+        <p class="price">$67</p>
+        <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+        <p class="ship">Instant. Nothing ships.</p>
+      </div>
+    </section>
 
-        <figure class="sheet-shot">
-          <img src="images/shutoff.png" width="680" height="705" alt="Shutoff and paint record. Water main in the basement on the east wall. Gas meter left of the front porch. Panel in the garage, north wall. Living room OC-117. Kitchen SW 7008." decoding="async">
-          <figcaption>Shutoff &amp; Paint Record. Closing night, this is the page.</figcaption>
-        </figure>
+    <section class="apart" aria-labelledby="apart-title">
+      <h2 id="apart-title">Or the one hole you already have.</h2>
+      <p class="sum">Apart, $27 + $22 + $27 = $76. The $67 file is the three of them.</p>
 
-        <figure class="sheet-shot">
-          <img src="images/warranty.png" width="680" height="780" alt="Warranty log. Water heater A.O. Smith GCV-40, warranty ends 2027-03-12. Refrigerator Whirlpool WRF555SDFZ, Metro Appliance 555-0142." decoding="async">
-          <figcaption>Warranty &amp; Appliance Log. The claim wants the install date and the serial.</figcaption>
-        </figure>
+      <article>
+        <h3>Shutoff &amp; Paint Record</h3>
+        <p class="amt">$27</p>
+        <p>The valve, and the color, so the second trip never happens.</p>
+        <a class="buy quiet" data-product="shutoffPaintRecord">Get the $27 record</a>
+      </article>
 
-        <figure class="sheet-shot">
-          <img src="images/year.png" width="680" height="481" alt="First-year calendar, months 1 to 4: change the HVAC filter, test the GFCI outlets, test smoke and CO alarms, clean the range hood filter." decoding="async">
-          <figcaption>First-Year Maintenance Calendar. The first filter season is already written down.</figcaption>
-        </figure>
-      </section>
+      <article>
+        <h3>Warranty &amp; Appliance Log</h3>
+        <p class="amt">$22</p>
+        <p>The date coverage ends, so the visit is not yours.</p>
+        <a class="buy quiet" data-product="warrantyApplianceLog">Get the $22 log</a>
+      </article>
 
-      <section class="moments" aria-labelledby="moments-title">
-        <h2 id="moments-title">The week you move in, and the first time something breaks</h2>
-        <ul>
-          <li>Someone asks where the water shuts off. The basement line is already on the sheet.</li>
-          <li>The painter texts for the living room. The code is OC-117, eggshell.</li>
-          <li>The water heater fails in month four. The warranty ends 2027-03-12.</li>
-        </ul>
-        <p class="moments-note">$67 is less than one wrong gallon of paint, or one hour while a plumber hunts for the main.</p>
-      </section>
-
-      <section class="gallery more" aria-label="More of the file">
-        <figure class="sheet-shot">
-          <img src="images/paint.png" width="680" height="649" alt="Paint codes. Living room OC-117 eggshell. Kitchen SW 7008 flat. Primary bedroom OC-20. Hall HC-172. Trim SW 7006 semi-gloss." decoding="async">
-          <figcaption>Paint codes. Room, brand, name, code, finish.</figcaption>
-        </figure>
-        <figure class="sheet-shot">
-          <img src="images/fall.png" width="680" height="456" alt="Fall maintenance. September, clean the gutters. October, shut the outdoor faucets. November, furnace check." decoding="async">
-          <figcaption>First-year calendar, fall. Gutters, outdoor faucets, the furnace.</figcaption>
-        </figure>
-        <figure class="sheet-shot">
-          <img src="images/contractors.png" width="680" height="560" alt="Who to call. Plumber Ada Ruiz 555-0138. HVAC North Heat and Air 555-0190. Electrician Kim Patel 555-0164. Painter Lane Color Co. 555-0117." decoding="async">
-          <figcaption>Who to call. Plumber, HVAC, electrician, painter.</figcaption>
-        </figure>
-      </section>
-
-      <section class="pack" aria-labelledby="pack-title">
-        <h2 id="pack-title">One file, or one section</h2>
-        <div class="offer-buy">
-          <p class="price"><span class="usd">$</span>67</p>
-          <a class="buy" data-product="newHomeFile">Get the $67 file</a>
-        </div>
-        <p class="fine">New Home File. All three sheets.</p>
-        <p class="split">Separately, <span class="eq">$27 + $22 + $27 = $76</span>. Same three files. $9 less as one download.</p>
-
-        <article class="record">
-          <div class="record-top">
-            <h3>Shutoff &amp; Paint Record</h3>
-            <p class="record-price">$27</p>
-          </div>
-          <p>Water, gas, and the panel, plus the paint code in each room.</p>
-          <a class="buy quiet" data-product="shutoffPaintRecord">Get the $27 record</a>
-        </article>
-        <article class="record">
-          <div class="record-top">
-            <h3>Warranty &amp; Appliance Log</h3>
-            <p class="record-price">$22</p>
-          </div>
-          <p>Model, serial, install date, warranty end, and who to call.</p>
-          <a class="buy quiet" data-product="warrantyApplianceLog">Get the $22 log</a>
-        </article>
-        <article class="record">
-          <div class="record-top">
-            <h3>First-Year Maintenance Calendar</h3>
-            <p class="record-price">$27</p>
-          </div>
-          <p>Twelve months: filters, detectors, gutters, outdoor faucets.</p>
-          <a class="buy quiet" data-product="firstYearMaintenanceCalendar">Get the $27 calendar</a>
-        </article>
-      </section>
-
-      <section class="steps" aria-labelledby="steps-title">
-        <h2 id="steps-title">How it works</h2>
-        <ol>
-          <li>Buy it. The PDF is instant.</li>
-          <li>Print the sheets you need. US Letter.</li>
-          <li>Write the shutoffs, the paint, the appliances, and months 1–12.</li>
-          <li>Leave the file by the keys, or in the drawer everyone knows.</li>
-        </ol>
-      </section>
-
-      <section class="inside" aria-labelledby="inside-title">
-        <h2 id="inside-title">What’s on the sheets</h2>
-        <ul>
-          <li>Shutoffs: water, gas, electric, and how you turn each one.</li>
-          <li>Paint: room, brand, color name, code, finish.</li>
-          <li>Appliances: make, model, serial, install date, warranty end, who to call.</li>
-          <li>Contractors: plumber, HVAC, electrician, painter.</li>
-          <li>First year, month by month: filters, gutters, detectors, caulk, outdoor faucets.</li>
-        </ul>
-      </section>
-
-      <section class="again" aria-label="New Home File, 67 dollars, again">
-        <p class="again-name">New Home File</p>
-        <div class="offer-buy">
-          <p class="price"><span class="usd">$</span>67</p>
-          <a class="buy" data-product="newHomeFile">Get the $67 file</a>
-        </div>
-        <p class="fine">Instant PDF. Nothing ships.</p>
-      </section>
-
-      <section class="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Before you buy</h2>
-        <dl>
-          <div>
-            <dt>What arrives?</dt>
-            <dd>A PDF. Nothing is shipped.</dd>
-          </div>
-          <div>
-            <dt>What size is it?</dt>
-            <dd>US Letter. Print it at home or at a shop.</dd>
-          </div>
-          <div>
-            <dt>Do you type into it?</dt>
-            <dd>No. You write it by hand. It is not an app.</dd>
-          </div>
-          <div>
-            <dt>Where does it live?</dt>
-            <dd>With the house. Reprint a page when a line changes.</dd>
-          </div>
-        </dl>
-      </section>
-    </main>
+      <article>
+        <h3>First-Year Maintenance Calendar</h3>
+        <p class="amt">$27</p>
+        <p>The first year, written down before it runs out.</p>
+        <a class="buy quiet" data-product="firstYearMaintenanceCalendar">Get the $27 calendar</a>
+      </article>
+    </section>
 
     <footer class="colophon">
-      <p class="sign">New Home File</p>
-      <p class="sign-note">A closeout record for one house.</p>
+      <p>New Home File</p>
     </footer>
   </div>
   <script src="checkout.config.js"></script>
