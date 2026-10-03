@@ -2,6 +2,8 @@
 
 A one-page store for a closeout record people keep after they buy a house. Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar. Static HTML, CSS, and JavaScript. No build step.
 
+The pictures in `images/` were made for this page: the file itself, and that file on a counter beside the keys.
+
 ## Offers
 
 | File | Price | Checkout key |

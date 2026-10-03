@@ -7,11 +7,13 @@
   <meta name="theme-color" content="#16382c">
   <meta name="format-detection" content="telephone=no">
   <title>New Home File</title>
-  <meta name="description" content="The file for the house you just bought. Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar. Instant PDF, $67.">
+  <meta name="description" content="You closed. Where's the shutoff? The New Home File is the record you print and leave by the keys. $67.">
   <meta property="og:title" content="New Home File">
-  <meta property="og:description" content="The file for the house you just bought. Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar. $67.">
+  <meta property="og:description" content="You closed. Where's the shutoff? A house file you print and leave by the keys. $67.">
+  <meta property="og:image" content="images/cover.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="images/cover.jpg" as="image">
   <link rel="preload" href="fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/public-sans-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -20,22 +22,27 @@
 <body>
   <div class="page">
     <header class="masthead">
-      <p class="tab">New Home File</p>
-      <h1>The file for the house you just bought.</h1>
-      <div class="clips" aria-hidden="true">
-        <span class="clip"></span>
-        <span class="clip-rule"></span>
-        <span class="clip"></span>
-      </div>
+      <p class="mark">New Home File</p>
+      <h1>You closed.<br>Where's the shutoff?</h1>
     </header>
 
     <main>
       <section class="offer" aria-label="New Home File, 67 dollars">
-        <p class="does">Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar.</p>
-        <p class="price"><span class="usd">$</span>67</p>
-        <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+        <figure class="cover">
+          <img src="images/cover.jpg" width="740" height="852" alt="White house file with a deep green tab reading New Home File, held by brass fasteners." fetchpriority="high">
+        </figure>
+        <div class="offer-buy">
+          <p class="price"><span class="usd">$</span>67</p>
+          <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+        </div>
         <p class="split">Three files separately are <span class="eq">$27 + $22 + $27 = $76</span>.</p>
+        <p class="does">Paint, shutoffs, warranties, contractors, the first year.</p>
       </section>
+
+      <figure class="counter">
+        <img src="images/counter.jpg" width="1152" height="864" alt="The house file lying on a counter beside a set of keys." decoding="async">
+        <figcaption>Leave it by the keys.</figcaption>
+      </figure>
 
       <section class="pick" aria-labelledby="pick-title">
         <h2 id="pick-title">Or pick one.</h2>
@@ -45,7 +52,7 @@
             <h3>Shutoff &amp; Paint Record</h3>
             <p class="record-price">$27</p>
           </div>
-          <p>Where the water, gas, and power shut off, and the paint in each room: brand, color, finish, and where the leftover can is kept.</p>
+          <p>Where the water, gas, and power shut off, and the paint in each room.</p>
           <a class="buy quiet" data-product="shutoffPaintRecord">Get the $27 record</a>
         </article>
 
