@@ -1,14 +1,12 @@
 # New Home File
 
-A one-page store for a closeout record people keep after they buy a house. Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar. Static HTML, CSS, and JavaScript. No build step.
-
-The pictures in `images/` were made for this page: the file itself, and that file on a counter beside the keys.
+A one-page store for the night something in a new house fails and nobody knows which way the valve turns. The photographs are that night. The file is not shown. Static HTML, CSS, and JavaScript. No build step.
 
 ## Offers
 
 | File | Price | Checkout key |
 | --- | ---: | --- |
-| New Home File (the three files, in one PDF) | $67 | `newHomeFile` |
+| New Home File (the three files, in one) | $67 | `newHomeFile` |
 | Shutoff & Paint Record | $27 | `shutoffPaintRecord` |
 | Warranty & Appliance Log | $22 | `warrantyApplianceLog` |
 | First-Year Maintenance Calendar | $27 | `firstYearMaintenanceCalendar` |
@@ -35,4 +33,4 @@ There is no payment form on this page.
 
 `.nojekyll` is in the root so GitHub Pages serves the folder as plain files.
 
-Type is Newsreader and Public Sans, both under the SIL Open Font License. License texts are in `fonts/`.
+Type is Public Sans, under the SIL Open Font License. The license text is in `fonts/`.
