@@ -1,0 +1,488 @@
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/newsreader-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/newsreader-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/public-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/public-sans-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/public-sans-600.woff2") format("woff2");
+}
+
+:root {
+  --paper: #fff;
+  --ink: #1b2e26;
+  --muted: #3e5249;
+  --green: #16382c;
+  --green-deep: #10281f;
+  --green-hover: #1c4638;
+  --brass: #a07d43;
+  --brass-deep: #7a5e30;
+  --line: #e4ddd2;
+  --rule: #cfc6b6;
+  --pad: 1.25rem;
+  --spine: 8px;
+  --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --sans: "Public Sans", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-variant-numeric: lining-nums;
+}
+
+.page {
+  width: min(100%, 40rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 var(--pad) calc(3rem + env(safe-area-inset-bottom));
+  border-left: var(--spine) solid var(--green);
+  background: var(--paper);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.tab {
+  display: inline-block;
+  margin: 0 0 1.35rem calc(var(--pad) * -1);
+  padding: 0.78rem 1rem 0.55rem var(--pad);
+  background: var(--green);
+  color: #f7f4ee;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom-right-radius: 2px;
+}
+
+h1 {
+  margin: 0;
+  max-width: 16ch;
+  font-family: var(--serif);
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.clips {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.15rem 0 1.05rem;
+}
+
+.clip {
+  position: relative;
+  width: 0.78rem;
+  height: 0.78rem;
+  flex: none;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f4e7cb, #d4b06a 38%, #8d6a34 72%, #5c431c);
+  box-shadow: 0 0 0 2px var(--green);
+}
+
+.clip::after {
+  content: "";
+  position: absolute;
+  inset: 0.22rem;
+  border-radius: 50%;
+  background: #4a3416;
+  box-shadow: inset 0 1px 0 rgba(232, 210, 160, 0.7);
+}
+
+.clip-rule {
+  height: 1px;
+  flex: 1;
+  background: var(--brass);
+}
+
+.does {
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.price {
+  margin: 0 0 0.9rem;
+  font-family: var(--serif);
+  font-size: 4.25rem;
+  font-weight: 600;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--green);
+  font-variant-numeric: lining-nums;
+}
+
+.usd {
+  margin-right: 0.04em;
+  font-size: 0.42em;
+  font-weight: 500;
+  letter-spacing: 0;
+  vertical-align: 0.85em;
+  color: var(--brass-deep);
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 2px;
+  background: var(--green);
+  color: #f7f4ee;
+  font: 600 1rem/1.2 var(--sans);
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: inset 0 -3px 0 var(--brass);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buy:visited {
+  color: #f7f4ee;
+}
+
+.buy.quiet {
+  background: transparent;
+  color: var(--green);
+  box-shadow: inset 0 0 0 1.5px var(--green);
+}
+
+.buy.quiet:visited {
+  color: var(--green);
+}
+
+.buy:focus-visible {
+  outline: 2px solid var(--brass-deep);
+  outline-offset: 3px;
+}
+
+.split {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.eq {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.pick {
+  margin-top: 2.85rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.record {
+  position: relative;
+  padding: 1.15rem 0 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.record:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.record::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 3px;
+  background: var(--green);
+}
+
+.record:nth-of-type(1)::before { width: 2.4rem; }
+.record:nth-of-type(2)::before { width: 4.6rem; }
+.record:nth-of-type(3)::before { width: 6.8rem; }
+
+.record-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+.record h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.011em;
+}
+
+.record-price {
+  margin: 0;
+  padding-top: 0.08rem;
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--green);
+}
+
+.record p {
+  margin: 0.55rem 0 0.95rem;
+  text-wrap: pretty;
+}
+
+.pack {
+  margin-top: 2.75rem;
+  padding-top: 1.15rem;
+  border-top: 3px solid var(--green);
+}
+
+.tally {
+  width: 100%;
+  margin: 0.85rem 0 1.15rem;
+  border-collapse: collapse;
+}
+
+.tally th,
+.tally td {
+  padding: 0.72rem 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: baseline;
+}
+
+.tally th {
+  padding-right: 1rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-align: left;
+  hyphens: none;
+}
+
+.tally td {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tally-sum th,
+.tally-sum td {
+  border-top: 3px double var(--rule);
+  border-bottom: 1px solid var(--line);
+  padding-top: 0.85rem;
+}
+
+.tally-pack th,
+.tally-pack td {
+  border-bottom: 0;
+  padding-top: 0.8rem;
+  color: var(--green);
+  font-weight: 600;
+}
+
+.tally-pack td {
+  font-size: 1.85rem;
+}
+
+.handoff {
+  margin-top: 2.85rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.handoff-line {
+  margin: 0 0 0.75rem;
+  max-width: 18ch;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.handoff p:last-child {
+  margin: 0;
+  max-width: 36em;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.colophon {
+  margin-top: 3.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.sign,
+.sign-note {
+  margin: 0;
+}
+
+.sign {
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sign-note {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+::selection {
+  background: #d7e6de;
+  color: var(--ink);
+}
+
+@media (hover: hover) {
+  .buy:hover {
+    background: var(--green-hover);
+    color: #f7f4ee;
+  }
+
+  .buy.quiet:hover {
+    background: #f2f6f4;
+    color: var(--green);
+  }
+}
+
+.buy:active {
+  background: var(--green-deep);
+  color: #f7f4ee;
+  transform: translateY(1px);
+}
+
+.buy.quiet:active {
+  background: #e7eeea;
+  color: var(--green-deep);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --pad: 1.85rem;
+    --spine: 10px;
+  }
+
+  .page {
+    border-right: 1px solid var(--line);
+  }
+
+  h1 {
+    font-size: 2.35rem;
+  }
+
+  .price {
+    font-size: 5rem;
+  }
+
+  .does {
+    font-size: 1.125rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .handoff-line {
+    font-size: 2.05rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buy:active {
+    transform: none;
+  }
+}
+
+@media print {
+  .page {
+    width: auto;
+    min-height: 0;
+    border: 0;
+  }
+
+  .tab,
+  .buy {
+    background: transparent !important;
+    color: var(--ink) !important;
+    box-shadow: none;
+    border: 1px solid var(--ink);
+  }
+}
