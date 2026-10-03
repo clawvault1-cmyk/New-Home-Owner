@@ -12,23 +12,30 @@
   <meta property="og:description" content="The line is already leaking. The answer stays in the house, not in someone’s memory. $67.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="images/sunday-night-valve.jpg" as="image">
   <link rel="preload" href="fonts/public-sans-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="page">
-    <section class="night" aria-label="New Home File, 67 dollars">
-      <h1>Sunday night.<br>Nobody knows<br>which way the<br>valve turns.</h1>
-      <div class="offer">
-        <p class="price">$67</p>
-        <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+    <section class="frame night" aria-label="New Home File, 67 dollars">
+      <img class="frame-photo" src="images/sunday-night-valve.jpg" width="720" height="1280" alt="Sunday night in a house basement. A hand has stopped on an unmarked valve. Water is already on the concrete." fetchpriority="high">
+      <div class="frame-copy">
+        <h1>Sunday night.<br>Nobody knows<br>which way the<br>valve turns.</h1>
+        <div class="offer">
+          <p class="price">$67</p>
+          <a class="buy" data-product="newHomeFile">Get the $67 file</a>
+        </div>
       </div>
     </section>
 
-    <section class="cost" aria-labelledby="cost-title">
-      <h2 id="cost-title">The line is<br>already leaking.</h2>
-      <p>You are still hunting the shutoff. The wrong way makes it run harder. The plumber charges for the minutes you spent looking. Then the fight, about who was supposed to know.</p>
+    <section class="frame cost" aria-labelledby="cost-title">
+      <img class="frame-photo" src="images/sunday-night-leak.jpg" width="720" height="1280" alt="The same night. Water is spraying from the line and has reached the boxes. A phone light is still on the floor.">
+      <div class="frame-copy">
+        <h2 id="cost-title">The line is already leaking.</h2>
+        <p>You are still hunting the shutoff. The wrong way makes it run harder. The plumber charges for the minutes you spent looking. Then the fight, about who was supposed to know.</p>
+      </div>
     </section>
 
     <section class="relief" aria-labelledby="relief-title">

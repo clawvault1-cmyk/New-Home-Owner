@@ -1,6 +1,6 @@
 # New Home File
 
-A one-page store for the night something in a new house fails and nobody knows which way the valve turns. The file is not shown. Static HTML, CSS, and JavaScript. No build step.
+A one-page store for the night something in a new house fails and nobody knows which way the valve turns. The photographs are that night. The file is not shown. Static HTML, CSS, and JavaScript. No build step.
 
 ## Offers
 
