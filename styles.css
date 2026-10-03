@@ -57,8 +57,8 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: max(1.35rem, env(safe-area-inset-top)) 1.2rem max(1.35rem, env(safe-area-inset-bottom));
+  justify-content: flex-start;
+  padding: max(1.65rem, env(safe-area-inset-top)) 1.15rem max(1.35rem, env(safe-area-inset-bottom));
 }
 
 h1,
@@ -78,34 +78,32 @@ h3 {
 }
 
 h1 {
-  max-width: 11ch;
-  font-size: clamp(3.35rem, 15.2vw, 5.35rem);
-  line-height: 0.88;
+  font-size: clamp(2.65rem, 13.6vw, 4.35rem);
+  line-height: 0.9;
 }
 
 .cost h2,
 .relief h2 {
-  max-width: 12ch;
-  font-size: clamp(2.85rem, 12.4vw, 4.4rem);
+  font-size: clamp(2.55rem, 12vw, 4rem);
   line-height: 0.9;
 }
 
 .cost p,
 .relief > p {
-  max-width: 22rem;
-  margin-top: 1.35rem;
-  color: #e6e8e4;
-  font-size: clamp(1.28rem, 5vw, 1.55rem);
-  line-height: 1.28;
-  letter-spacing: -0.02em;
+  max-width: 20rem;
+  margin-top: 1.5rem;
+  color: #f4f5f3;
+  font-size: clamp(1.45rem, 6.1vw, 1.85rem);
+  line-height: 1.22;
+  letter-spacing: -0.028em;
 }
 
 .offer {
-  margin-top: 2rem;
+  margin-top: 2.1rem;
 }
 
 .night .offer {
-  margin-top: 2.25rem;
+  margin-top: 1.85rem;
 }
 
 .price {
