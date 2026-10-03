@@ -2,7 +2,7 @@
 
 A one-page store for a closeout record people keep after they buy a house. Paint colors, shutoff locations, appliance and warranty dates, contractor contacts, and a first-year maintenance calendar. Static HTML, CSS, and JavaScript. No build step.
 
-The pictures in `images/` were made for this page: the file itself, and that file on a counter beside the keys.
+The pictures in `images/` are the sheets themselves, typeset from `sheets/render.html` and filled with a sample house: a shutoff, a paint code, a warranty date. Handwriting in the sheets is Patrick Hand, under the SIL Open Font License.
 
 ## Offers
 

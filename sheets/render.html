@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Home File sheets</title>
+  <style>
+    @font-face {
+      font-family: "Newsreader";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../fonts/newsreader-600.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Public Sans";
+      font-style: normal;
+      font-weight: 500;
+      src: url("../fonts/public-sans-500.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Public Sans";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../fonts/public-sans-600.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Patrick Hand";
+      font-style: normal;
+      font-weight: 400;
+      src: url("../fonts/patrick-hand-400.woff2") format("woff2");
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 48px;
+      background: #d8d4cc;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      align-items: flex-start;
+    }
+
+    .sheet {
+      width: 680px;
+      background: #fbf9f4;
+      color: #161616;
+      padding: 28px 32px 32px;
+      border: 1px solid #c9c2b4;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid #161616;
+    }
+
+    .file-name {
+      margin: 0;
+      font-family: "Public Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .sample {
+      font-family: "Public Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .sheet-title {
+      margin: 12px 0 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .where {
+      margin: 6px 0 0;
+      font-family: "Public Sans", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.01em;
+    }
+
+    .field {
+      margin-top: 18px;
+    }
+
+    .lab {
+      font-family: "Public Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hand {
+      margin-top: 2px;
+      font-family: "Patrick Hand", cursive;
+      font-size: 40px;
+      line-height: 1.12;
+      color: #1a2744;
+    }
+
+    .code {
+      margin-top: 0;
+      font-family: "Public Sans", sans-serif;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 1;
+      color: #1a2744;
+      letter-spacing: 0.01em;
+    }
+
+    .date {
+      font-family: "Public Sans", sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.1;
+      color: #1a2744;
+      letter-spacing: 0;
+    }
+
+    .rule {
+      margin-top: 4px;
+      border-bottom: 1.5px solid #161616;
+    }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px 20px;
+      align-items: end;
+    }
+
+    .pair .lab { grid-column: 1 / -1; }
+
+    .finish {
+      font-family: "Patrick Hand", cursive;
+      font-size: 36px;
+      color: #1a2744;
+      padding-bottom: 4px;
+    }
+
+    .month {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 8px 16px;
+      align-items: baseline;
+      margin-top: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #161616;
+    }
+
+    .month .when {
+      font-family: "Public Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .month .hand {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .who {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 18px;
+      align-items: baseline;
+      margin-top: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #161616;
+    }
+
+    .trade {
+      font-family: "Public Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .who .hand { margin: 0; font-size: 36px; }
+    .phone {
+      font-family: "Public Sans", sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: #1a2744;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet" id="hero">
+    <header class="head">
+      <p class="file-name">New Home File</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Shutoff &amp; Paint</h2>
+    <p class="where">14 North Sample Street</p>
+
+    <div class="field">
+      <div class="lab">Water main</div>
+      <div class="hand rule">Basement, east wall, left of the heater.</div>
+      <div class="hand">Red-handled valve.</div>
+    </div>
+
+    <div class="field">
+      <div class="lab">Living room paint</div>
+      <div class="hand">Benjamin Moore · Simply White</div>
+      <div class="pair rule">
+        <div class="code">OC-117</div>
+        <div class="finish">Eggshell</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="lab">Water heater warranty</div>
+      <div class="hand">A.O. Smith GCV-40</div>
+      <div class="date rule">Ends 2027-03-12</div>
+    </div>
+  </article>
+
+  <article class="sheet" id="shutoff">
+    <header class="head">
+      <p class="file-name">Shutoff &amp; Paint Record</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Where it shuts off</h2>
+    <p class="where">14 North Sample Street</p>
+
+    <div class="field">
+      <div class="lab">Water main</div>
+      <div class="hand rule">Basement, east wall, left of the heater. Red-handled valve.</div>
+    </div>
+    <div class="field">
+      <div class="lab">Gas</div>
+      <div class="hand rule">Outside. Meter left of the front porch steps.</div>
+    </div>
+    <div class="field">
+      <div class="lab">Electrical panel</div>
+      <div class="hand rule">Garage, north wall. Gray box labeled MAIN.</div>
+    </div>
+    <div class="field">
+      <div class="lab">Living room · Benjamin Moore Simply White</div>
+      <div class="pair rule">
+        <div class="code">OC-117</div>
+        <div class="finish">Eggshell</div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="lab">Kitchen · Sherwin-Williams Alabaster</div>
+      <div class="pair rule">
+        <div class="code">SW 7008</div>
+        <div class="finish">Flat</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="sheet" id="warranty">
+    <header class="head">
+      <p class="file-name">Warranty &amp; Appliance Log</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">If it breaks</h2>
+    <p class="where">14 North Sample Street</p>
+
+    <div class="field">
+      <div class="lab">Water heater · A.O. Smith GCV-40</div>
+      <div class="hand">Installed 2025-03-12</div>
+      <div class="date rule">Ends 2027-03-12</div>
+    </div>
+    <div class="field">
+      <div class="lab">Refrigerator · Whirlpool WRF555SDFZ</div>
+      <div class="hand">Serial WX-440218 · Metro Appliance · 555-0142</div>
+      <div class="date">Installed 2026-04-02</div>
+      <div class="date rule">Ends 2027-04-02</div>
+    </div>
+    <div class="field">
+      <div class="lab">Dishwasher · Bosch SHPM88Z75N</div>
+      <div class="date">Installed 2026-04-02</div>
+      <div class="date rule">Ends 2028-04-02</div>
+    </div>
+    <div class="field">
+      <div class="lab">Furnace · Carrier 24ACC636</div>
+      <div class="hand">North Heat &amp; Air · 555-0190</div>
+      <div class="date rule">Ends 2034-09-18</div>
+    </div>
+  </article>
+
+  <article class="sheet" id="year">
+    <header class="head">
+      <p class="file-name">First-Year Maintenance</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Months 1–4</h2>
+    <p class="where">Write the date when it’s done.</p>
+
+    <div class="month">
+      <div class="when">Month 1</div>
+      <div class="hand">Change the HVAC filter.</div>
+    </div>
+    <div class="month">
+      <div class="when">Month 2</div>
+      <div class="hand">Test the GFCI outlets.</div>
+    </div>
+    <div class="month">
+      <div class="when">Month 3</div>
+      <div class="hand">Test smoke and CO alarms. New batteries if they fail.</div>
+    </div>
+    <div class="month">
+      <div class="when">Month 4</div>
+      <div class="hand">Clean the range hood filter.</div>
+    </div>
+  </article>
+
+  <article class="sheet" id="fall">
+    <header class="head">
+      <p class="file-name">First-Year Maintenance</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Fall</h2>
+    <p class="where">Before the first freeze.</p>
+
+    <div class="month">
+      <div class="when">Sept</div>
+      <div class="hand">Clean the gutters.</div>
+    </div>
+    <div class="month">
+      <div class="when">Oct</div>
+      <div class="hand">Shut the outdoor faucets. Drain the hoses.</div>
+    </div>
+    <div class="month">
+      <div class="when">Nov</div>
+      <div class="hand">Furnace check. Recaulk the tub if the bead is cracked.</div>
+    </div>
+  </article>
+
+  <article class="sheet" id="paint">
+    <header class="head">
+      <p class="file-name">Shutoff &amp; Paint Record</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Paint codes</h2>
+    <p class="where">What the painter will ask for.</p>
+
+    <div class="field">
+      <div class="lab">Living room · Benjamin Moore Simply White · Eggshell</div>
+      <div class="code rule">OC-117</div>
+    </div>
+    <div class="field">
+      <div class="lab">Kitchen · Sherwin-Williams Alabaster · Flat</div>
+      <div class="code rule">SW 7008</div>
+    </div>
+    <div class="field">
+      <div class="lab">Primary bedroom · Benjamin Moore Pale Oak · Eggshell</div>
+      <div class="code rule">OC-20</div>
+    </div>
+    <div class="field">
+      <div class="lab">Hall · Benjamin Moore Revere Pewter · Eggshell</div>
+      <div class="code rule">HC-172</div>
+    </div>
+    <div class="field">
+      <div class="lab">Trim · Sherwin-Williams Extra White · Semi-gloss</div>
+      <div class="code rule">SW 7006</div>
+    </div>
+  </article>
+
+  <article class="sheet" id="contractors">
+    <header class="head">
+      <p class="file-name">Warranty &amp; Appliance Log</p>
+      <p class="sample">Sample</p>
+    </header>
+    <h2 class="sheet-title">Who to call</h2>
+    <p class="where">The names that came with the house.</p>
+
+    <div class="who">
+      <div>
+        <div class="trade">Plumber</div>
+        <div class="hand">Ada Ruiz</div>
+      </div>
+      <div class="phone">555-0138</div>
+    </div>
+    <div class="who">
+      <div>
+        <div class="trade">HVAC</div>
+        <div class="hand">North Heat &amp; Air</div>
+      </div>
+      <div class="phone">555-0190</div>
+    </div>
+    <div class="who">
+      <div>
+        <div class="trade">Electrician</div>
+        <div class="hand">Kim Patel</div>
+      </div>
+      <div class="phone">555-0164</div>
+    </div>
+    <div class="who">
+      <div>
+        <div class="trade">Painter</div>
+        <div class="hand">Lane Color Co.</div>
+      </div>
+      <div class="phone">555-0117</div>
+    </div>
+  </article>
+</body>
+</html>
